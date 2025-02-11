@@ -7,4 +7,8 @@ jobs:
       - name: Print 1
         run: echo "Hello world"
       - name: Print 2
-        run: echo "End"
+        run: |
+          echo "1"
+          echo "2"
+          echo "3"
+          
