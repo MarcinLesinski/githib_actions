@@ -28,7 +28,7 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
-  deploy:
+  build:
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -42,6 +42,17 @@ jobs:
       run: npm ci
     - name: Build project
       run: npm run build
+    - name: Uplod artifacts
+      uses: actions/uplod-artifacts@v3
+      with:
+        name: dist-files
+        path: | 
+          dist
+          dist2
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
     - name: Deply
       run: echo "Deploying..."
           
