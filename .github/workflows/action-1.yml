@@ -3,6 +3,10 @@ on:
   workflow_dispatch:
   pull_request:
     types: [opended, edited]
+  push:
+    branches: [main, 'dev-*', 'feat/**'] # * any set of characters, ** also slash
+    paths-ignore:
+      - '.github/workflows/**'
 jobs:
   first-job:
     runs-on: ubuntu-latest
