@@ -1,0 +1,8 @@
+name: Show Issues
+on: [issues]
+jobs:
+  show-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show
+        run: echo "${{ steps }}"
