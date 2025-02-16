@@ -53,6 +53,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+    - name: Get build artefact
+      uses: actions/download-artefact@v4
     - name: Deply
       run: echo "Deploying..."
           
