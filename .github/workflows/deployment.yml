@@ -64,6 +64,8 @@ jobs:
         name: dist-files
     - name: Display artefact content
       run: ls
+    - name: Output filename
+      run: echo "${{ needs.build.outpus.script-file }}"
     - name: Deply
       run: echo "Deploying..."
           
