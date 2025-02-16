@@ -55,6 +55,10 @@ jobs:
     steps:
     - name: Get build artefact
       uses: actions/download-artefact@v4
+      with:
+        name: dist-files
+    - name: Display artefact content
+      run: ls
     - name: Deply
       run: echo "Deploying..."
           
